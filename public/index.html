@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link rel="stylesheet" type="text/css" media="screen" href="main.css" /-->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
+    <script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
+    <!--script src="main.js"></script-->
+    <script type='text/javascript'>
+        window.onload = function() {
+            //Formio.createForm(document.getElementById('formio'), 'https://examples.form.io/example');
+            //Formio.createForm(document.getElementById('formio'), 'https://examples.form.io/wizard');
+            Formio.createForm(document.getElementById('formio'), {
+                components: [
+                  {
+                    type: 'textfield',
+                    key: 'firstName',
+                    label: 'First Name',
+                    placeholder: 'Enter your first name.',
+                    input: true
+                  },
+                  {
+                    type: 'textfield',
+                    key: 'lastName',
+                    label: 'Last Name',
+                    placeholder: 'Enter your last name',
+                    input: true
+                  },
+                  {
+                    type: 'button',
+                    action: 'submit',
+                    label: 'Submit',
+                    theme: 'primary'
+                  }
+                ]
+            });
+            //Formio.builder(document.getElementById('builder'));
+        };
+    </script>
+</head>
+<body>
+    <!--div id='formio'></div-->
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="showPage('access')">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <label></label>
+            <button type="button" class="btn btn-primary">I want something new!</button>
+        </div>
+    </div>
+</body>
+</html>
